@@ -1,0 +1,210 @@
+/* Global style*/
+body {
+    font-family: "Inter", sans-serif;
+    background: #F8F5F0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("bg.jpg");
+    padding: 10px;
+  }
+  /* main container*/
+  #todo-container {
+    background: #FFF;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E2DED7;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #1C1C1E;
+  }
+  
+  #todo-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  /*for the input box*/
+  #input-box {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #F2F0EB;
+    outline: none;
+  }
+  /* input button styling*/
+  #input-button {
+    padding: 10px 15px;
+    background: #FFD700;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  /*on-hover changes*/
+  #input-button:hover {
+    background: #FFC107;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  /*style for the tasks added*/
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFF;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  /*for the task contents*/
+  .task-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+  /*for the task text*/
+  .task-text {
+    flex: 1;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  /*taks checkbox styiling*/
+  .task-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .task-checkbox:checked {
+    background-color: #FFD700;
+  }
+  /*animation for the smily face*/
+  .completed .task-text::before {
+    content: "😊";
+    margin-right: 5px;
+    display: inline-block;
+    animation: popIn 0.3s ease-in-out;
+  }
+  /*frames animation*/
+  @keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  /* for edit and delete buttons*/
+  .task-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  /* Full responsiveness for all handsets */
+  /*for tablets and phones*/
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+      padding: 5%;
+    }
+  
+    #todo-container {
+      width: 100%;
+      padding: 15px;
+      box-shadow: none;
+      border: none;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    #todo-form {
+      flex-direction: column;
+    }
+  
+    #input-box {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    #input-button {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .task-content {
+      width: 100%;
+    }
+  
+    .task-actions {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  /*for smaller phones*/
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 18px;
+    }
+  
+    #input-box {
+      font-size: 14px;
+    }
+  
+    #input-button {
+      font-size: 14px;
+    }
+  
+    li {
+      padding: 10px;
+    }
+  }
+  /*for large phones*/
+  @media (min-width: 769px) and (max-width: 1024px) {
+    #todo-container {
+      max-width: 500px;
+    }
+  }
+  

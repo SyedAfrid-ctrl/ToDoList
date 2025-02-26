@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Happy To-Do List</title>
+    <!-- Importing Google Fonts:"Inter" for a clean and modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Importing fontawsome for used emojies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="ToDoList.css">
+</head>
+<body>
+  <div id="todo-container"> <!--main container -->
+    <div id="header">
+      <h1>🌈 Happy To-Do List 😊</h1>
+    </div>
+    <div id="todo-form">
+      <input type="text" id="input-box" placeholder="Add a happy task!" />
+      <button id="input-button" onclick="addTask()">Add</button>
+    </div>
+    <ul id="list-container"></ul>
+    <hr />
+    <div class="counter-container">
+      Completed: <span id="completed-counter">0</span> | Uncompleted: <span id="uncompleted-counter">0</span><!-- counter section-->
+    </div>
+    <p id="congrats-message" style="display: none;">🎉 Congratulations! All tasks completed! 🎉</p><!--final congrats message-->
+  </div>
+  <script src="ToDoList1.js"></script>
+</body>
+</html>
